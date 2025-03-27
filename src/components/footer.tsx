@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image"; // Import the next/image component for optimized images
-import { FaInstagram, FaFacebook, FaTwitter, FaFish } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaTwitter} from "react-icons/fa";
 
 export default function Footer() {
   return (

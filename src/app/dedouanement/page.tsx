@@ -144,85 +144,86 @@ export default function Dedouanement() {
           />
         </div>
       </div>
+
       {/* Customs Clearance Section */}
-<section className="py-24 bg-white">
-  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div className="grid items-center gap-16 lg:grid-cols-2">
-      <motion.div 
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        className="relative aspect-video overflow-hidden rounded-3xl shadow-2xl"
-      >
-        <Image
-          src="/images/clearance.jpeg"
-          alt="Customs Clearance"
-          fill
-          className="object-cover"
-          quality={85}
-        />
-      </motion.div>
-      
-      <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-      >
-        <h2 className="text-4xl font-bold text-blue-900 md:text-5xl">
-          Streamlined Customs Clearance
-        </h2>
-        <p className="mt-6 text-lg text-slate-600">
-          Navigating complex customs regulations with precision and efficiency. Our experts handle all documentation, 
-          tariffs, and compliance requirements to ensure smooth border transitions.
-        </p>
-        
-        <div className="mt-8 space-y-6">
-          <div className="flex items-start">
-            <div className="flex-shrink-0">
-              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-indigo-600">
-                <svg className="h-4 w-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-            </div>
-            <div className="ml-4">
-              <h3 className="text-lg font-semibold text-gray-900">Automated Documentation</h3>
-              <p className="mt-1 text-gray-600">Digital processing with real-time tracking updates</p>
-            </div>
-          </div>
+      <section className="py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid items-center gap-16 lg:grid-cols-2">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative aspect-video overflow-hidden rounded-3xl shadow-2xl"
+            >
+              <Image
+                src="/images/clearance.jpeg"
+                alt="Customs Clearance"
+                fill
+                className="object-cover"
+                quality={85}
+              />
+            </motion.div>
 
-          <div className="flex items-start">
-            <div className="flex-shrink-0">
-              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-indigo-600">
-                <svg className="h-4 w-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                </svg>
-              </div>
-            </div>
-            <div className="ml-4">
-              <h3 className="text-lg font-semibold text-gray-900">Global Compliance</h3>
-              <p className="mt-1 text-gray-600">Up-to-date knowledge of 150+ countries' regulations</p>
-            </div>
-          </div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold text-blue-900 md:text-5xl">
+                Streamlined Customs Clearance
+              </h2>
+              <p className="mt-6 text-lg text-slate-600">
+                Navigating complex customs regulations with precision and efficiency. Our experts handle all documentation, 
+                tariffs, and compliance requirements to ensure smooth border transitions.
+              </p>
 
-          <div className="flex items-start">
-            <div className="flex-shrink-0">
-              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-indigo-600">
-                <svg className="h-4 w-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+              <div className="mt-8 space-y-6">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-indigo-600">
+                      <svg className="h-4 w-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-gray-900">Automated Documentation</h3>
+                    <p className="mt-1 text-gray-600">Digital processing with real-time tracking updates</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-indigo-600">
+                      <svg className="h-4 w-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-gray-900">Global Compliance</h3>
+                    <p className="mt-1 text-gray-600">Up-to-date knowledge of 150+ countries&apos; regulations</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-indigo-600">
+                      <svg className="h-4 w-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-gray-900">Expedited Processing</h3>
+                    <p className="mt-1 text-gray-600">Average clearance time 38% faster than industry standard</p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="ml-4">
-              <h3 className="text-lg font-semibold text-gray-900">Expedited Processing</h3>
-              <p className="mt-1 text-gray-600">Average clearance time 38% faster than industry standard</p>
-            </div>
+            </motion.div>
           </div>
         </div>
-      </motion.div>
-    </div>
-  </div>
-</section>
+      </section>
 
       <Footer />
     </>

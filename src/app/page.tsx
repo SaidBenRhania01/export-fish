@@ -73,7 +73,7 @@ export default function Home() {
               Ready to Expand Your Market?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Let's discuss your seafood export needs
+              Let&apos;s discuss your seafood export needs
             </p>
             <button className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-colors duration-300 transform hover:scale-105">
               Get Started Today

@@ -1,7 +1,8 @@
 "use client"
 import { useState } from "react";
 import Link from "next/link";
-import { FaFish, FaIndustry, FaShippingFast, FaClipboardCheck, FaBars, FaTimes, FaBox } from "react-icons/fa";
+import {  FaIndustry, FaShippingFast, FaClipboardCheck, FaBars, FaTimes, FaBox } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -12,7 +13,7 @@ export default function Navbar() {
         <div className="container mx-auto flex items-center justify-between px-8 py-6">
           {/* Logo with extra decoration */}
           <div className="flex items-center transform hover:scale-105 transition duration-300">
-            <img src="/images/logo.png" alt="LOGISTOCEAN" className="mr-3 h-12 animate-bounce" />
+            <Image src="/images/logo.png" height={100} width={100} alt="LOGISTOCEAN" className="mr-3 h-12 animate-bounce" />
             <Link href="/" className="text-white font-extrabold text-2xl">
               LogistOcean
             </Link>

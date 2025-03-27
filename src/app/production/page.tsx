@@ -72,7 +72,7 @@ export default function Production() {
 
         <div className="mt-14 text-lg leading-relaxed max-w-3xl mx-auto text-gray-700 font-sans">
           <p>
-            <span className="font-semibold text-teal-600 text-xl">Fresh and Chilled Fish:</span> Our fish is meticulously stored at optimal temperatures throughout the entire supply chain, starting from the moment it's caught. Advanced refrigeration techniques and storage systems ensure maximum freshness and preserve the fish’s nutritional value. By maintaining a consistent low temperature, we minimize bacterial growth, oxidation, and degradation, guaranteeing that only premium-quality products reach you.
+            <span className="font-semibold text-teal-600 text-xl">Fresh and Chilled Fish:</span> Our fish is meticulously stored at optimal temperatures throughout the entire supply chain, starting from the moment it&apos;s caught. Advanced refrigeration techniques and storage systems ensure maximum freshness and preserve the fish’s nutritional value. By maintaining a consistent low temperature, we minimize bacterial growth, oxidation, and degradation, guaranteeing that only premium-quality products reach you.
           </p>
         </div>
       </div>
