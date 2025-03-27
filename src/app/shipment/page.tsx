@@ -4,7 +4,7 @@ import Footer from "@/components/footer";
 
 export default function Shipment() {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-r from-blue-50 to-purple-100">
+    <div className="min-h-screen flex flex-col bg-gradient-to-r from-teal-50 to-blue-200">
       {/* Navbar at top */}
       <Navbar />
 
@@ -17,10 +17,10 @@ export default function Shipment() {
             { id: 2, img: "/images/ocean-care2.jpeg", title: "Carefully Prepared", description: "Our fish are carefully prepared for export. Fresh fish are kept at optimal temperatures to maintain their freshness, while dried fish undergo advanced drying techniques for long-term preservation." },
             { id: 3, img: "/images/service33.jpg", title: "Fresh & Dried Fish", description: "We specialize in exporting fresh and dried fish worldwide, ensuring top quality and compliance with international health standards." },
             { id: 4, img: "/images/air.jpeg", title: "Reliable Shipping Services", description: "We offer reliable shipping services by sea, air, and land, ensuring that our fish products reach their destinations quickly and in perfect condition." },
-            { id: 5, img: "/images/img1.jpg", title: "Customs Clearance Procedures", description: "We handle all customs clearance procedures to guarantee smooth transit through borders, complying with both local and international regulations." },
+            { id: 5, img: "/images/costums.jpeg", title: "Customs Clearance Procedures", description: "We handle all customs clearance procedures to guarantee smooth transit through borders, complying with both local and international regulations." },
             { id: 6, img: "/images/fish.jpg", title: "High-Quality Seafood", description: "Our services include bulk fish exports for wholesalers, supermarkets, and restaurants, ensuring a steady supply of high-quality seafood." }
           ].map(service => (
-            <div key={service.id} className="relative rounded-xl shadow-2xl hover:scale-105 transition-all duration-300 bg-white overflow-hidden">
+            <div key={service.id} className="relative rounded-3xl shadow-xl hover:scale-105 transition-all duration-500 ease-in-out bg-white overflow-hidden">
               {/* Image container */}
               <div className="relative w-full h-64">
                 <Image
@@ -30,12 +30,12 @@ export default function Shipment() {
                   objectFit="cover"
                   className="transition-all duration-500 hover:opacity-80"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-30"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-800 via-transparent to-transparent opacity-40"></div>
               </div>
 
               {/* Text Content */}
               <div className="p-6">
-                <h3 className="text-3xl font-extrabold text-gray-800 mb-2">{service.title}</h3>
+                <h3 className="text-3xl font-extrabold text-indigo-800 mb-2">{service.title}</h3>
                 <p className="text-lg text-gray-700">{service.description}</p>
               </div>
             </div>

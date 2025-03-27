@@ -1,11 +1,17 @@
+"use client";
+import React from "react";
 import Link from "next/link";
-import Image from "next/image"; // Import the next/image component for optimized images
-import { FaInstagram, FaFacebook, FaTwitter} from "react-icons/fa";
+import Image from "next/image";
+import { FaInstagram, FaFacebook, FaTwitter, FaArrowUp } from "react-icons/fa";
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer className="relative bg-gradient-to-r from-blue-900 to-indigo-800 pt-20 pb-8 text-white overflow-hidden shadow-2xl">
-      {/* Decorative Wave SVG */}
+      {/* Wave SVG remains unchanged */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
         <svg
           className="relative block w-[calc(100%+1.3px)] h-24"
@@ -31,80 +37,38 @@ export default function Footer() {
       </div>
 
       <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center text-center md:text-left py-10">
-        {/* Logo Section with Image */}
         <div className="flex items-center space-x-3 mb-6 lg:mb-0">
           <Image 
-            src="/images/logo.png"  // Path to your logo image
-            alt="LOGISTOCEAN Logo"  // Alternative text for the logo
-            width={40}  // Adjust width as needed
-            height={40}  // Adjust height as needed
-            className="animate-bounce"
+            src="/images/logo.png" 
+            alt="LOGISTOCEAN Logo" 
+            width={80} 
+            height={80} 
           />
-          <span className="text-2xl font-extrabold">LogistOcean</span>
+          <span className="text-3xl font-extrabold">LogistOcean</span>
         </div>
 
-        {/* Links Section */}
+        {/* Updated Navigation Links */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-6 lg:mb-0">
           <div className="space-y-2">
-            <h4 className="font-semibold uppercase">Product</h4>
+            <h4 className="font-semibold uppercase">Quick Links</h4>
             <ul className="space-y-1">
-              <li>
-                <Link href="#" className="hover:underline">
-                  Features
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:underline">
-                  Integrations
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:underline">
-                  Pricing
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:underline">
-                  FAQ
-                </Link>
-              </li>
+              <li><Link href="/" className="hover:underline">Home</Link></li>
+              <li><Link href="/products" className="hover:underline">Products</Link></li>
             </ul>
           </div>
 
           <div className="space-y-2">
-            <h4 className="font-semibold uppercase">Company</h4>
+            <h4 className="font-semibold uppercase">Operations</h4>
             <ul className="space-y-1">
-              <li>
-                <Link href="#" className="hover:underline">
-                  Privacy
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:underline">
-                  Terms of Service
-                </Link>
-              </li>
+              <li><Link href="/production" className="hover:underline">Production</Link></li>
+              <li><Link href="shipment" className="hover:underline">Shipment Solutions</Link></li>
             </ul>
           </div>
 
           <div className="space-y-2">
-            <h4 className="font-semibold uppercase">Developers</h4>
+            <h4 className="font-semibold uppercase">Services</h4>
             <ul className="space-y-1">
-              <li>
-                <Link href="#" className="hover:underline">
-                  Public API
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:underline">
-                  Documentation
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:underline">
-                  Guides
-                </Link>
-              </li>
+              <li><Link href="dedouanement" className="hover:underline">Customs Clearance</Link></li>
             </ul>
           </div>
 
@@ -112,22 +76,36 @@ export default function Footer() {
             <h4 className="font-semibold uppercase">Follow Us</h4>
             <div className="flex space-x-4">
               <Link href="#" className="text-white hover:text-blue-500">
-                <FaFacebook size={20} />
+                <FaFacebook size={24} />
               </Link>
               <Link href="#" className="text-white hover:text-blue-400">
-                <FaTwitter size={20} />
+                <FaTwitter size={24} />
               </Link>
               <Link href="#" className="text-white hover:text-pink-500">
-                <FaInstagram size={20} />
+                <FaInstagram size={24} />
               </Link>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Footer Bottom */}
+      {/* Contact Information remains unchanged */}
       <div className="text-center py-6 text-sm text-white opacity-80">
-        © 2025 LOGISTOCEAN. All rights reserved.
+        <p>
+          Email: <a href="mailto:contact@logistocean.com" className="underline">contact@logistocean.com</a> | Tel: <a href="tel:+49123456789" className="underline">+49 123 456 789</a> | Address: <Link href="https://www.google.com/maps/search/Islane,+80000+Agadir,+Morocco" target="_blank" rel="noreferrer" className="underline">Islane, 80000 Agadir, Morocco</Link>
+        </p>
+        <p className="text-lg font-bold mt-2">LogistOcean Morocco</p>
+        <p>© 2025 LOGISTOCEAN. All rights reserved.</p>
+      </div>
+
+      <div className="fixed bottom-4 right-4 z-50">
+        <button 
+          onClick={scrollToTop} 
+          className="p-3 bg-indigo-700 rounded-full hover:bg-indigo-600 transition-colors shadow-lg"
+          aria-label="Back to top"
+        >
+          <FaArrowUp size={20} />
+        </button>
       </div>
     </footer>
   );
