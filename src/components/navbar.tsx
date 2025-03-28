@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
 import Link from "next/link";
-import {  FaIndustry, FaShippingFast, FaClipboardCheck, FaBars, FaTimes, FaBox } from "react-icons/fa";
+import { FaIndustry, FaShippingFast, FaClipboardCheck, FaBars, FaTimes, FaBox } from "react-icons/fa";
 import Image from "next/image";
 
 export default function Navbar() {
@@ -9,11 +9,18 @@ export default function Navbar() {
 
   return (
     <nav className="w-full relative">
-      <header className="bg-gradient-to-r from-blue-600 to-purple-600 shadow-2xl">
+      <header className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 shadow-2xl">
         <div className="container mx-auto flex items-center justify-between px-8 py-6">
           {/* Logo with extra decoration */}
           <div className="flex items-center transform hover:scale-105 transition duration-300">
-            <Image src="/images/logo.png" height={100} width={100} alt="LOGISTOCEAN" className="mr-3 h-12 animate-bounce" />
+            {/* <Image src="/images/logo.png" height={100} width={100} alt="LOGISTOCEAN" className="mr-3 h-12 animate-bounce" /> */}
+            <Image 
+              src="/images/logo.png" 
+              alt="LOGISTOCEAN Logo" 
+              width={80} 
+              height={80}
+              className="filter brightness-0 invert"
+            />
             <Link href="/" className="text-white font-extrabold text-2xl">
               LogistOcean
             </Link>
@@ -61,7 +68,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-gradient-to-r from-blue-600 to-purple-600 shadow-2xl z-50">
+        <div className="md:hidden absolute top-full left-0 w-full bg-gradient-to-r from-blue-500 to-teal-500 shadow-2xl z-50">
           <ul className="flex flex-col items-center space-y-6 py-6">
             <li className="flex items-center space-x-2">
               <FaIndustry className="text-white text-xl" />

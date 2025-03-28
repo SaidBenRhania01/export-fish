@@ -4,188 +4,248 @@ import Image from "next/image";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { motion } from "framer-motion";
+import {
+  FiAnchor,
+  FiGlobe,
+  FiShield,
+  FiClock,
+  FiCheckCircle,
+  FiMessageSquare,
+} from "react-icons/fi";
 
 export default function Dedouanement() {
   return (
     <>
       <Navbar />
 
-      {/* Hero Section */}
-      <div className="relative h-screen w-full overflow-hidden bg-white">
+      {/* Hero Section - Enhanced */}
+      <section className="relative h-[80vh] w-full overflow-hidden bg-gradient-to-b from-blue-900 to-indigo-900">
         <Image
           src="/images/ocean-care.jpeg"
           alt="Ocean Care"
           fill
-          className="object-cover z-0 opacity-80"
+          className="object-cover opacity-40"
           priority
-          quality={85}
+          quality={100}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/70 to-blue-100/50 z-10" />
-        <div className="relative z-20 flex h-full items-center justify-center text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+        <div className="relative z-20 flex h-full items-center justify-center text-center px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-blue-900 drop-shadow-lg"
+            transition={{ duration: 0.8 }}
+            className="max-w-6xl"
           >
-            Maritime Excellence
-          </motion.h1>
-        </div>
-      </div>
-
-      {/* Features Grid */}
-      <section className="py-16 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 md:grid-cols-3">
-            {[
-              {
-                icon: (
-                  <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                ),
-                title: "Precision Logistics",
-                description: "Advanced tracking systems ensuring seamless global operations",
-                bgColor: "bg-blue-700",
-              },
-              {
-                icon: (
-                  <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                ),
-                title: "Global Network",
-                description: "150+ ports worldwide with real-time monitoring",
-                bgColor: "bg-teal-700",
-              },
-              {
-                icon: (
-                  <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                ),
-                title: "Certified Safety",
-                description: "ISO 9001 certified quality management systems",
-                bgColor: "bg-blue-700",
-              },
-            ].map((feature, index) => (
-              <div key={index} className="rounded-xl bg-gray-50 p-6 shadow-md hover:shadow-xl transition-all">
-                <div className={`mb-4 h-12 w-12 rounded-full ${feature.bgColor} flex items-center justify-center`}>
-                  {feature.icon}
-                </div>
-                <h3 className="mb-2 text-xl font-semibold text-blue-900">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </div>
-            ))}
-          </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-2xl">
+              <span className="bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent">
+                Maritime Excellence
+              </span>
+              <br />
+              in Global Seafood Logistics
+            </h1>
+            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto font-light">
+              Navigating international waters of seafood export with precision and regulatory expertise
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      {/* Content Section with Image */}
-      <section className="py-20 bg-gradient-to-r from-white to-blue-50">
+      {/* Features Grid - Enhanced */}
+      <section className="py-20 bg-gradient-to-b from-white to-blue-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div className="relative aspect-video overflow-hidden rounded-2xl shadow-lg hover:scale-105 transition-transform duration-700">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="grid gap-8 md:grid-cols-3"
+          >
+            {[
+              {
+                icon: <FiAnchor className="w-8 h-8 text-white" />,
+                title: "Precision Logistics",
+                description: "Blockchain-tracked shipments from ocean to destination",
+                bg: "bg-teal-600"
+              },
+              {
+                icon: <FiGlobe className="w-8 h-8 text-white" />,
+                title: "Global Compliance",
+                description: "150+ countries with localized customs expertise",
+                bg: "bg-blue-600"
+              },
+              {
+                icon: <FiShield className="w-8 h-8 text-white" />,
+                title: "Quality Assurance",
+                description: "HACCP-certified cold chain management",
+                bg: "bg-teal-600"
+              },
+            ].map((feature, index) => (
+              <motion.div 
+                key={index}
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                className="group relative overflow-hidden rounded-2xl bg-white shadow-xl hover:shadow-2xl transition-all"
+              >
+                <div className={`absolute -top-10 -right-10 w-32 h-32 rounded-full ${feature.bg} opacity-20 group-hover:opacity-30 transition-opacity`} />
+                <div className="p-8 relative">
+                  <div className={`w-14 h-14 rounded-xl ${feature.bg} flex items-center justify-center mb-6`}>
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-800 mb-3">{feature.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Content Section - Enhanced */}
+      <section className="py-20 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div 
+              className="relative aspect-video overflow-hidden rounded-3xl shadow-2xl"
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+            >
               <Image
                 src="/images/ocean22.jpeg"
                 alt="Cargo inspection"
                 fill
-                className="object-cover"
-                quality={85}
+                className="object-cover hover:scale-105 transition-transform duration-700"
+                quality={90}
               />
-            </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
-                Sustainable Maritime Solutions
+            </motion.div>
+
+            <motion.div
+              initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-blue-500 font-semibold mb-4">SUSTAINABLE LOGISTICS</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 leading-tight">
+                Eco-Conscious Maritime Solutions
               </h2>
-              <p className="mt-4 text-lg text-gray-700">
-                Leveraging cutting-edge technology to deliver environmentally conscious logistics services.
-                Our hybrid fleet reduces emissions by 40% compared to industry standards.
-              </p>
-              <div className="mt-8 grid grid-cols-2 gap-8">
-                <div>
-                  <div className="text-2xl font-bold text-teal-600">25+</div>
-                  <div className="mt-1 text-gray-500">Years Experience</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-teal-600">98.7%</div>
-                  <div className="mt-1 text-gray-500">On-Time Delivery</div>
+              <div className="space-y-6 text-gray-600">
+                <p className="text-lg leading-relaxed">
+                  Our hybrid fleet utilizes AI-optimized routing to reduce emissions by 45% while maintaining 
+                  industry-leading delivery speeds.
+                </p>
+                <div className="grid grid-cols-2 gap-6">
+                  {[
+                    { value: "25+", label: "Years Expertise" },
+                    { value: "98.7%", label: "On-Time Delivery" },
+                    { value: "40%", label: "Emission Reduction" },
+                    { value: "150+", label: "Global Ports" }
+                  ].map((stat, index) => (
+                    <div key={index} className="p-4 bg-blue-50 rounded-xl text-center">
+                      <div className="text-2xl font-bold text-teal-600">{stat.value}</div>
+                      <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Full-Width Statement */}
-      <div className="py-20 bg-blue-900">
-        <div className="mx-auto max-w-4xl px-4 text-center text-white">
-          <blockquote className="text-3xl font-light italic">
-            “In a world of constant motion, we deliver unwavering reliability across every ocean and border.”
+      {/* Full-Width Statement - Enhanced */}
+      <section className="relative py-24 bg-gradient-to-r from-blue-900 to-indigo-900">
+        <div className="absolute inset-0 opacity-10">
+          <Image
+            src="/images/ocean-care.jpeg"
+            alt="Background texture"
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className="mx-auto max-w-4xl px-4 text-center relative">
+          <FiMessageSquare className="text-4xl text-teal-400 mx-auto mb-8" />
+          <blockquote className="text-2xl md:text-3xl font-light text-white leading-relaxed">
+            “In the relentless current of global trade, we anchor reliability - delivering perfection across 
+            every nautical mile of your seafood supply chain.”
           </blockquote>
         </div>
-      </div>
+      </section>
 
-      {/* Image Gallery */}
-      <div className="grid grid-cols-1 gap-6 p-8 md:grid-cols-3 bg-white">
+      {/* Image Gallery - Enhanced */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-1 bg-gray-100">
         {["ocean-care.jpeg", "ocean22.jpeg", "costums.jpeg"].map((img, index) => (
-          <div key={index} className="group relative aspect-square overflow-hidden rounded-xl hover:scale-105 transition-transform duration-700">
+          <motion.div 
+            key={index}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            className="group relative aspect-square overflow-hidden"
+          >
             <Image
               src={`/images/${img}`}
               alt="Gallery Image"
               fill
-              className="object-cover transition-transform duration-700 group-hover:scale-110"
+              className="object-cover transform transition duration-700 group-hover:scale-105"
             />
-          </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="text-white font-medium text-lg">
+                {img.replace('.jpeg', '').replace('-', ' ')}
+              </span>
+            </div>
+          </motion.div>
         ))}
       </div>
 
-      {/* Customs Clearance Section */}
-      <section className="py-20 bg-gray-50">
+      {/* Customs Clearance Section - Enhanced */}
+      <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              className="space-y-6"
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
-              className="relative aspect-video overflow-hidden rounded-2xl shadow-lg"
+            >
+              <div className="text-blue-500 font-semibold mb-4">CUSTOMS EXPERTISE</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 leading-tight">
+                Seamless Border Transition
+              </h2>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <FiCheckCircle className="w-5 h-5 text-teal-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Full Compliance Assurance</h3>
+                    <p className="text-gray-600">
+                      Automated documentation processing with real-time regulatory updates across 50+ jurisdictions
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <FiClock className="w-5 h-5 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">24/7 Clearance Monitoring</h3>
+                    <p className="text-gray-600">
+                      Live shipment status updates with predictive delay prevention systems
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              className="relative aspect-video rounded-3xl shadow-2xl overflow-hidden"
+              initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
             >
               <Image
                 src="/images/clearance.jpeg"
                 alt="Customs Clearance"
                 fill
-                className="object-cover"
-                quality={85}
+                className="object-cover hover:scale-105 transition-transform duration-700"
+                quality={90}
               />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
-                Streamlined Customs Clearance
-              </h2>
-              <p className="mt-4 text-lg text-gray-700">
-                Navigating complex customs regulations with precision and efficiency. Our experts handle all documentation, tariffs, and compliance requirements to ensure smooth border transitions.
-              </p>
-              <div className="mt-8 space-y-4">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-teal-600">
-                      <svg className="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-semibold text-blue-900">Automated Documentation</h3>
-                    <p className="text-gray-600">Digital processing with real-time tracking updates</p>
-                  </div>
-                </div>
-                {/* Additional content can be added here */}
-              </div>
             </motion.div>
           </div>
         </div>
